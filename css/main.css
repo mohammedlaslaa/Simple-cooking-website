@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Satisfy', cursive;
+    width: 100%;
+    overflow: scroll;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 50px auto;
+    color: rgb(242, 121, 126);
+}
+
+/*************************************** HEADER ***************************************/
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+#headcontain>h2 {
+    font-size: 2.5em;
+    text-align: center;
+    animation-name: rotate;
+    animation-duration: 1.5s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(6deg);
+    }
+    66% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#headcontain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 9vw;
+    height: 9vw;
+    min-width: 142px;
+    min-height: 142px;
+    margin: 20px;
+    line-height: 50%;
+    background-color: rgb(242, 121, 126);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#logo h2 {
+    font-size: 2.5em;
+    transform: rotate(-20deg);
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+}
+
+/****************************************** MAIN ******************************************/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*************************************** MAIN/MENU ***************************************/
+
+#menu {
+    flex-basis: 100%;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+#firstul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#firstul>li {
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+#firstul>li:hover {
+    border-bottom: 1px solid black;
+    text-shadow: 8px 3px 3px #A2A2A2;
+    margin-top: -1px;
+    cursor: pointer;
+
+}
+
+#firstul>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+.drop {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+}
+
+.drop li {
+    text-shadow: none;
+}
+
+.drop li a {
+    font-size: 0.75em;
+    text-decoration: none;
+    color: black;
+}
+
+.drop li:hover {
+    background-color: brown;
+    opacity: 0.5;
+}
+
+#firstul li:hover .drop {
+    display: block;
+}
+
+#hamburger {
+    border: 1px solid black;
+    display: none;
+    width: 50px;
+    margin: 0 auto;
+}
+
+.ham {
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+}
+
+/*************************************** SECTIONS ***************************************/
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+/************************************ SECTION/IMAGEBLOC ********************************/
+
+#imagebloc {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#imagebloc figure {
+    width: 250px;
+    height: 200px;
+}
+
+#imagebloc figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+#imagebloc>* {
+    margin: 10px;
+}
+
+/************************************ SECTION/ARTICLE *********************************/
+
+#homearticle {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#homearticle p {
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+/************************************ SECTION/RECIPELIST *********************************/
+
+#ingredient, #stage {
+    margin: 50px auto;
+}
+
+#recipelist {
+    width: 100%;
+}
+
+#ingredient {
+    width: 75%;
+    position: relative;
+}
+
+#recipelist img {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+}
+
+#ingredient p, #stage p {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+#ingredient li {
+    margin-bottom: 0.5em;
+    width: 100%;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+#stage {
+    width: 50%;
+}
+
+#stage li {
+    margin-bottom: 1.5em;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+/************************************* SECTION/RESULT *********************************/
+
+#result {
+    width: 100%;
+}
+
+#result table {
+    margin: 80px auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+#result th, #result td {
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    font-weight: 200;
+    width: 100px;
+}
+
+#result th {
+    background-color: white;
+}
+
+#result tr:nth-child(odd) {
+    background-color: #FDF2E9;
+}
+
+/********************************** SECTION/INSCRIPTION ******************************/
+
+#inscriptionform {
+    margin: 0 auto;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+#wrapfield {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 3vh;
+}
+
+#wrapfield label {
+    font-family: sans-serif;
+}
+
+.lab, .lab2 {
+    width: auto;
+    margin: 0.5em;
+}
+
+.lab1 {
+    min-width: 460px;
+}
+
+#numv, #way, #zip, #cityn, #coun {
+    width: auto;
+}
+
+#city {
+    width: 120px;
+}
+
+#way {
+    margin-left: 1em;
+}
+
+#way2 {
+    width: 40%;
+}
+
+#number {
+    width: 35px;
+}
+
+#location {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.size1 {
+    width: 30%;
+    min-width: 170px;
+    margin: 8px 0;
+}
+
+.size2 {
+    width: 35%;
+    min-width: 200px;
+    margin: 8px 0;
+}
+
+#zipcode {
+    width: 50px;
+}
+
+#country {
+    width: 70px;
+}
+
+.lab label {
+    display: inline-block;
+}
+
+#phone {
+    width: 120px;
+}
+
+#fieldset1, #fieldset2 {
+    padding: 0.5vw;
+    width: 40%;
+    text-align: left;
+}
+
+#submitform {
+    margin: 20px;
+    width: 120px;
+    height: 35px;
+    background-color: rgb(242, 121, 126);
+    font-weight: 800;
+    color: white;
+}
+
+#submitform:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+
+/********************************** SECTION/CONNEXION ******************************/
+
+#secconnexion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#connexion fieldset {
+    padding: 20px;
+}
+
+#submitconnect {
+    margin-top: 10px;
+    padding: 0.5em;
+}
+
+#connexion {
+    margin: 50px;
+    width: auto;
+}
+
+/*************************************** FOOTER ***************************************/
+
+footer {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    color: rgb(242, 121, 126);
+    border-top: 2px solid black;
+}
+
+footer p {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+/************************************ MEDIA QUERIES ************************************/
+
+@media screen and (max-width: 480px) {
+    #headcontain>h2 {
+        display: none;
+    }
+
+    #logo {
+        min-width: 180px;
+        min-height: 180px;
+    }
+
+    #imagebloc figure {
+        width: 100%;
+    }
+
+    #imagebloc {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        flex-basis: 100%;
+    }
+    #menu ul li {
+        text-align: center;
+    }
+    #firstul {
+        display: none;
+    }
+    #headcontain>h2 {
+        font-size: 1.8em;
+    }
+    #fieldset1, #fieldset2 {
+        width: 95%;
+    }
+    #birthdate, #hamburger {
+        display: block;
+    }
+
+    #firstul #hamburger:hover  {
+        display: block;
+    }
+
+    #wrapfield label {
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin: 50px auto;
+    }
+
+    #imagebloc {
+        width: 90%;
+    }
+
+    #result table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #recipelist img {
+        position: static;
+    }
+
+    #result th, #result td {
+        font-size: 0.8em;
+    }
+
+    .lab1 {
+        min-width: 300px;
+    }
+
+    #birth {
+        display: block;
+        width: 100%;
+    }
+
+    #fieldset1, #fieldset2 {
+        width: 60%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1030px) and (max-width: 1370px) {
+    #imagebloc {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #recipelist img {
+        right: 0px;
+    }
+}
